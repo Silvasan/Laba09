@@ -27,10 +27,19 @@ int main() {
 		return -1; 
 	}
 
-	*coef = derivative(coef, n, k);
-	for (int i = 0; i <= n; i++) {
-		printf("%.1lf ", coef[i]);
+	//polynomial before
+	printf("\nYou have entered a polynomial:\n");
+	for (int i = 0; i <= n; ++i) {
+		if (i == 0)
+			printf("%.3lf + ", coef[i], i);
+		else if (i == n)
+			printf("%.3lf*x^%d\n", coef[i], i);
+		else printf("%.3lf*x^%d + ", coef[i], i);
 	}
+
+	printf("\nYou got:\n");
+	//polynomial after
+	derivative(coef, n, k);
 	free(coef);
 	*coef = NULL;
 	system("pause");
