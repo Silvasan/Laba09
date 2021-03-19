@@ -37,15 +37,9 @@ int main() {
 		else printf("%.5lf*x^%d + ", coef[i], i );
 	}
 
-	integral(coef, n, k);
-
-	//polynomial after
 	printf("\nYou got:\n");
-	for (int i = 0; i <= n; i++) {
-		if(i != n)
-			printf("%.4lf*x^%d + ", coef[i], i+k);
-		else printf("%.4lf*x^%d\n", coef[i], i+k);
-	}
+	//polynomial after
+	integral(coef, n, k);
 	free(coef);
 	*coef = NULL;
 	system("pause");

@@ -9,6 +9,9 @@ int integral(double *arr, int n, int k) {
 					counter *= j;
 				}
 				arr[i] /= counter;
+				if (i != n)
+					printf("%.4lf*x^%d + ", arr[i], i + k);
+				else printf("%.4lf*x^%d\n", arr[i], i + k);
 			}
 	return *arr;
 }
