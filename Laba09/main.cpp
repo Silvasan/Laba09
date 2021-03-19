@@ -41,7 +41,7 @@ int main() {
 	//polynomial after
 	derivative(coef, n, k);
 	free(coef);
-	*coef = NULL;
+	coef = NULL;
 	system("pause");
 	return 0;
 }
